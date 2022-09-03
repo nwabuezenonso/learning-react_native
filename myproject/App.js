@@ -17,6 +17,7 @@ export default function App() {
         placeholder='e.g John Doe' 
         onChangeText={(val) => setName(val)}
       />
+      <View>Making changes to react native</View>
      <Text>name: {name}</Text>
      <TextInput 
         keyboardType='numeric'
