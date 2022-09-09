@@ -5,7 +5,7 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 // in react native when we pass a function to onchange text, it takes in the value inside the text
 
 export default function App() {
-  const [name, setName] = useState('chun-li');
+  const [name, setName] = useState("li");
   const [age, setAge] = useState(30);
 
   return (
