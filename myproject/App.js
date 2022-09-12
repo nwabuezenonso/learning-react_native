@@ -1,31 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react'
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, ScrollView, View } from 'react-native';
 
 // in react native when we pass a function to onchange text, it takes in the value inside the text
 
 export default function App() {
-  const [name, setName] = useState("li");
-  const [age, setAge] = useState(30);
+  const [people, setPeople] = useState([
+    {name: 'shaun', key: '1' },
+    {name: 'yoshi', key: '2'},
+    {name: 'peach', key: '3'},
+    {name: 'mario', key: '4'},
+    {name: 'luigi', key: '5'},
+    {name: 'toad', key: '6'},
+    {name: 'bowser', key: '7'},
+  ]);
 
   return (
+    // A map function cycle through the array and returns each function in the array
     <View style={styles.container}>
-      <Text>Enter name:</Text>
-      <TextInput 
-        multiline
-        style={styles.input} 
-        placeholder='e.g John Doe' 
-        onChangeText={(val) => setName(val)}
-      />
-      <View>Making changes to react native</View>
-     <Text>name: {name}</Text>
-     <TextInput 
-        keyboardType='numeric'
-        style={styles.input} 
-        placeholder='e.g 50' 
-        onChangeText={(val) => setAge(val)}
-      />
-      <Text>age: {age}</Text>
+      <ScrollView>
+        {people.map(item =>(
+          <View key={item.key}>
+            <Text style={styles.item}>{item.name}</Text>
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -37,11 +36,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  input: {
-    borderWidth: 1,
-    borderColor: '#777',
-    padding: 8,
-    margin: 10,
-    width: 200
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: 'pink',
+    fontSize: 24
   }
 });
