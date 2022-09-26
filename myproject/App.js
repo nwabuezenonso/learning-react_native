@@ -18,13 +18,7 @@ export default function App() {
   return (
     // A map function cycle through the array and returns each function in the array
     <View style={styles.container}>
-      <ScrollView>
-        {people.map(item =>(
-          <View key={item.key}>
-            <Text style={styles.item}>{item.name}</Text>
-          </View>
-        ))}
-      </ScrollView>
+      <Text>we are working on a react native project</Text>
     </View>
   );
 }
