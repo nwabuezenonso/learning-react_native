@@ -4,9 +4,21 @@ import { Button, StyleSheet, Text, ScrollView, View } from 'react-native';
 
 
 export default function App() {
+  const [ name, setName ] = useState('shaun');
+  const [ person, setPerson ] = useState({name: 'mario', age: 40});
+
+  const clickHandler = () => {
+    setName('chun-li')
+    setPerson({name: 'luigi', age: 45 })
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.boldText}>we are very original</Text>
+      <Text>My name is {name}</Text>
+      <Text>His name is {person.name}</Text>
+      <View style = {styles.buttonContainer}>
+        <Button title='update state' nnpress = {clickHandler}/>
+      </View>
     </View>
   );
 }
@@ -20,5 +32,8 @@ const styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold'
+  },
+  buttonContainer: {
+    marginTop: 20
   }
 });
