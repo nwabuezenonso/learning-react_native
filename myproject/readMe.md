@@ -4,3 +4,5 @@
  A map function cycle through the array and returns each function in the array and a style prop is a way to style a component
 
  A view style can not pass down to a text
+
+ OnchangeText atomatically takes in the value of the text field.
