@@ -8,3 +8,5 @@
  OnchangeText atomatically takes in the value of the text field.
 
  Flat lists differ from scroll view in performance and smaller codes 
+
+ function of state automatically takes in the current state of an item
