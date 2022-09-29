@@ -6,3 +6,5 @@
  A view style can not pass down to a text
 
  OnchangeText atomatically takes in the value of the text field.
+
+ Flat lists differ from scroll view in performance and smaller codes 

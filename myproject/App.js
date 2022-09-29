@@ -1,29 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, ScrollView, View } from 'react-native';
+import { Button, StyleSheet, Text, FlatList, View } from 'react-native';
 
 
 export default function App() {
   const [ people, setPeople ] = useState([
-    {name: 'mike', key: 1},
-    {name: 'kevin', key:2 },
-    {name: 'mario', key:3 },
-    {name: 'luigi', key:4 },
-    {name: 'peach', key:6 },
-    {name: 'toad', key:7 },
-    {name: 'boiler', key:8 },
-    {name: 'mat', key:9 },
+    {name: 'mike', id: 1},
+    {name: 'kevin', id:2 },
+    {name: 'mario', id:3 },
+    {name: 'luigi', id:4 },
+    {name: 'peach', id:6 },
+    {name: 'toad', id:7 },
+    {name: 'boiler', id:8 },
+    {name: 'mat', id:9 },
   ]);
 
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <FlatList
+        keyExtractor={(item) => item.id}
+        data={people}
+        renderItem={({ item}) => (
+          <Text style={styles.item}>{item.name}</Text>
+        )}
+      />
+      {/* <ScrollView>
         {people.map(item => (
           <View key={item.key}>
             <Text style={styles.item}>{item.name}</Text>
           </View>
         ))}
-      </ScrollView>
+      </ScrollView> */}
     </View>
   );
 }
