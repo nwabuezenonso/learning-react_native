@@ -14,6 +14,7 @@ export default function App() {
     <View style={styles.container}>
       {/* header */}
       <View style={styles.content}>
+        {/* to form */}
         <View style={styles.list}>
             <FlatList
               data={todos}
@@ -32,4 +33,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  content: {
+    padding: 40,
+  },
+  list: {
+    marginTop: 20
+  },
+
 });
