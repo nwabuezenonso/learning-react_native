@@ -17,8 +17,8 @@ export default function App() {
         <View style={styles.list}>
             <FlatList
               data={todos}
-              renderItem={( todos ) => (
-                <Text>{todos.text}</Text>
+              renderItem={( {item} ) => (
+                <Text>{item.text}</Text>
               )}
             />
         </View>
