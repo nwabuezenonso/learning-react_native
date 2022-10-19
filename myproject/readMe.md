@@ -9,4 +9,6 @@
 
  Flat lists differ from scroll view in performance and smaller codes 
 
+ keyExtractor is used to figure out the property to use as a Key
+
  function of state automatically takes in the current state of an item
