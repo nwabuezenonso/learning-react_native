@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, Button } from "react-native";
+import { StyleSheet, Text, TextInput, Button, View } from "react-native";
 
 export default function AddTodo({ submitHandler }){
 
@@ -15,7 +15,7 @@ export default function AddTodo({ submitHandler }){
                 placeholder="new todo..."
                 onChangeText={changeHandler}
             />
-            <button onPress={() => submitHandler(text)} title='add todo' color="coral" />
+            <Button onPress={() => submitHandler(text)} title='add todo' color="coral" />
         </View>
     )
 }
