@@ -13,4 +13,9 @@ const styles = StyleSheet.create({
   container: {
     padding: 30
   },
+  title: {
+    fontFamily: 'nunito-bold',
+    fontSize: 18
+  }
 });
+
