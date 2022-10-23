@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Home() {
+export default function Home(onLayout) {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'nunito-bold',
-    fontSize: 18
+    fontSize: 30
   }
 });
 
